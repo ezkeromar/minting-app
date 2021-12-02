@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x2953399124f0cbb46d2cbacd8a89cf0599974963",
+  "SCAN_LINK": "https://polygonscan.com/address/0x2953399124f0cbb46d2cbacd8a89cf0599974963",
+  "NETWORK": {
+    "NAME": "Polygon",
+    "SYMBOL": "Matic",
+    "ID": 137
+  },
+  "NFT_NAME": "Mickey Mouse Disney Collectibles",
+  "SYMBOL": "NCC",
+  "MAX_SUPPLY": 241,
+  "WEI_COST": 175000000000000000000,
+  "DISPLAY_COST": 175,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/mickeymousecollection",
+  "SHOW_BACKGROUND": true
+}

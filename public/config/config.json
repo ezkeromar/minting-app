@@ -8,7 +8,7 @@
   },
   "NFT_NAME": "Mickey Mouse Disney Collectibles",
   "SYMBOL": "NCC",
-  "MAX_SUPPLY": 241,
+  "MAX_SUPPLY": 4000,
   "WEI_COST": 175000000000000000000,
   "DISPLAY_COST": 175,
   "GAS_LIMIT": 285000,

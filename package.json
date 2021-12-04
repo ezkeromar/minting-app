@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "HashLips minting dapp is a quick and easy way to connect your smart contract and start minting NFTs.",
   "private": true,
-  "homepage": "file:///home/digital-factory2/JSprojects/minting-app/build",
+  "homepage": ".",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
-    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build"
+    "build": "react-scripts build"
   },
   "browserslist": {
     "production": [

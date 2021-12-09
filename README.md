@@ -1,5 +1,7 @@
 # Welcome to HashLips 👄
 
+https://stackoverflow.com/questions/57221710/how-to-call-an-async-function-after-a-state-change-in-order-to-change-another-s
+
 ![](https://github.com/HashLips/hashlips_nft_minting_dapp/blob/main/logo.png)
 
 All the code in these repos was created and explained by HashLips on the main YouTube channel.

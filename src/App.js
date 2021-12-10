@@ -4,6 +4,7 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
+import store from "./redux/store"
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -120,37 +121,73 @@ function App() {
     SHOW_BACKGROUND: false,
   });
 
-  const claimNFTs = () => {
-    let cost = CONFIG.WEI_COST;
-    let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String(cost * mintAmount);
-    let totalGasLimit = String(gasLimit * mintAmount);
-    console.log("Cost: ", totalCostWei);
-    console.log("Gas limit: ", totalGasLimit);
-    setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
-    setClaimingNft(true);
-    blockchain.smartContract.methods
-      .mint(blockchain.account, mintAmount)
-      .send({
-        gasLimit: String(totalGasLimit),
-        to: CONFIG.CONTRACT_ADDRESS,
-        from: blockchain.account,
-        value: totalCostWei,
-      })
-      .once("error", (err) => {
-        console.log(err);
-        setFeedback("Sorry, something went wrong please try again later.");
-        setClaimingNft(false);
-      })
-      .then((receipt) => {
-        console.log(receipt);
-        setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
-        );
-        setClaimingNft(false);
-        dispatch(fetchData(blockchain.account));
-      });
+  const claimNFTs = async () => {
+    let totalWhiteListed = await store
+        .getState()
+        .blockchain.smartContract.methods.whiteListMintCount(blockchain.account)
+        .call();
+    if (totalWhiteListed <= 0) {
+      setFeedback("Sorry, You are not in the whiteList wait untill the public sales beggin.");
+    } else if (totalWhiteListed < mintAmount) {
+      setFeedback("Sorry, You ecceeded your mint amount.");
+    } else {
+      let cost = CONFIG.WEI_COST;
+      let gasLimit = CONFIG.GAS_LIMIT;
+      let totalCostWei = String(cost * mintAmount);
+      let totalGasLimit = String(gasLimit * mintAmount);
+      console.log("Cost: ", totalCostWei);
+      console.log("Gas limit: ", totalGasLimit);
+      setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
+      setClaimingNft(true);
+      blockchain.smartContract.methods
+        // .mint(blockchain.account, mintAmount)
+        .totalSupply()
+        .send({
+          gasLimit: String(totalGasLimit),
+          to: CONFIG.CONTRACT_ADDRESS,
+          from: blockchain.account,
+          value: totalCostWei,
+        })
+        .once("error", (err) => {
+          console.log(err);
+          setFeedback("Sorry, something went wrong please try again later.");
+          setClaimingNft(false);
+        })
+        .then((receipt) => {
+          console.log(receipt);
+          setFeedback(
+            `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+          );
+          setClaimingNft(false);
+        });
+      }
   };
+
+  const isWhiteListed = async () => {
+    // blockchain.smartContract.methods
+    // .whiteListMintCount(blockchain.account)
+    // .send({
+    //   from: blockchain.account
+    // })
+    //   .once("error", (err) => {
+    //     console.log(err);
+    //     setFeedback("Sorry, You are not in the whiteList wait untill the public sales beggin.");
+    //   })
+    //   .then((receipt) => {
+    //     console.log(receipt);
+    //     claimNFTs()
+    //   });
+
+    let totalWhiteListed = await store
+        .getState()
+        .blockchain.smartContract.methods.whiteListMintCount(blockchain.account)
+        .call();
+    if (totalWhiteListed >= 0) {
+      this.claimNFTs();
+    } else {
+      setFeedback("Sorry, You are not in the whiteList wait untill the public sales beggin.");
+    }
+  }
 
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;

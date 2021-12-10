@@ -66,23 +66,6 @@ export const connect = () => {
             CONFIG.CONTRACT_ADDRESS
           );
 
-          if (window.ethereum) {
-            this.setState({ address: window.ethereum.selectedAddress });
-            window.ethereum.on("accountsChanged", accounts => {
-              // this.setState({ address: accounts[0] });
-              axios.get(
-                "https://api.infura.io/v1/jsonrpc/mainnet/eth_call?params=[{%22to%22:%220xdd5cec9019ec8449a5d01d0d8175e6519530d276%22,%22data%22:%220x08e0d29d000000000000000000000000" +
-                  window.ethereum.selectedAddress.substring(2) +
-                  "%22},%22latest%22]"
-              ).then(res => {
-                console.log(res)
-                let r = res.data.result;
-                console.log(r[r.length - 1]);
-                // this.setState({ whitelisted: r[r.length - 1] });
-              });
-            });
-          }
-
           dispatch(
             connectSuccess({
               account: accounts[0],

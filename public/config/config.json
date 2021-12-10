@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x2953399124f0cbb46d2cbacd8a89cf0599974963",
-  "SCAN_LINK": "https://polygonscan.com/address/0x2953399124f0cbb46d2cbacd8a89cf0599974963",
+  "CONTRACT_ADDRESS": "0x6e4bcd1853259c071796a2a92b0153104315c4b8",
+  "SCAN_LINK": "https://etherscan.io/address/0x6e4bcd1853259c071796a2a92b0153104315c4b8",
   "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "Matic",
-    "ID": 137
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 1
   },
-  "NFT_NAME": "Mickey Mouse Disney Collectibles",
-  "SYMBOL": "NCC",
-  "MAX_SUPPLY": 4000,
-  "WEI_COST": 175000000000000000000,
-  "DISPLAY_COST": 175,
+  "NFT_NAME": "Wold Of Norja",
+  "SYMBOL": "NORJA",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 50000000000000000,
+  "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/mickeymousecollection",
-  "SHOW_BACKGROUND": true
+  "MARKETPLACE": "",
+  "MARKETPLACE_LINK": "",
+  "SHOW_BACKGROUND": false
 }

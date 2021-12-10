@@ -79,13 +79,12 @@ export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px dashed var(--secondary);
   background-color: var(--accent);
-  border-radius: 100%;
-  width: 300px;
+  width: 320px;
   @media (min-width: 900px) {
-    width: 250px;
+    width: 35vw;
   }
   @media (min-width: 1000px) {
-    width: 200px;
+    width: 35vw;
   }
   transition: width 0.5s;
 `;
@@ -250,11 +249,8 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px dashed var(--secondary)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
             <s.TextTitle
@@ -405,14 +401,6 @@ function App() {
               </>
             )}
             <s.SpacerMedium />
-          </s.Container>
-          <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg
-              alt={"example"}
-              src={"/config/images/example.gif"}
-              style={{ transform: "scaleX(-1)" }}
-            />
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />

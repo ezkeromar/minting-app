@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Minting app is a quick and easy way to connect your smart contract and start minting NFTs.",
   "private": true,
-  "homepage": "https://www.ajjel.com",
+  "homepage": "https://ajjel.com",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

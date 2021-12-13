@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "HashLips minting dapp is a quick and easy way to connect your smart contract and start minting NFTs.",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://mint-theworldofnorja.com",
   "dependencies": {
     "axios": "^0.24.0",
     "react": "^17.0.2",

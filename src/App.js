@@ -121,15 +121,16 @@ function App() {
   });
 
   const claimNFTs = async () => {
-    let totalWhiteListed = await store
-        .getState()
-        .blockchain.smartContract.methods.whiteListMintCount(blockchain.account)
-        .call();
-    if (totalWhiteListed <= 0) {
-      setFeedback("Sorry, You are not in the whiteList wait untill the public sales beggin.");
-    } else if (totalWhiteListed < mintAmount) {
-      setFeedback("Sorry, You ecceeded your mint amount.");
-    } else {
+    // console.log(blockchain)
+    // let totalWhiteListed = await store
+    //     .getState()
+    //     .blockchain.smartContract.methods.whiteListMintCount(blockchain.account)
+    //     .call();
+    // if (totalWhiteListed <= 0) {
+    //   setFeedback("Sorry, You are not in the whiteList wait until the public sales beggin.");
+    // } else if (totalWhiteListed < mintAmount) {
+    //   setFeedback(`Sorry, You exceeded your mint account(${totalWhiteListed}).`);
+    // } else {
       let cost = CONFIG.WEI_COST;
       let gasLimit = CONFIG.GAS_LIMIT;
       let totalCostWei = String(cost * mintAmount);
@@ -140,7 +141,8 @@ function App() {
       setClaimingNft(true);
       blockchain.smartContract.methods
         // .mint(blockchain.account, mintAmount)
-        .totalSupply()
+        // .whitelistMint(mintAmount)
+        .mintOrc(mintAmount)
         .send({
           gasLimit: String(totalGasLimit),
           to: CONFIG.CONTRACT_ADDRESS,
@@ -159,7 +161,7 @@ function App() {
           );
           setClaimingNft(false);
         });
-      }
+      // }
   };
 
   const isWhiteListed = async () => {

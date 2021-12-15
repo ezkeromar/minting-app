@@ -1,18 +1,26 @@
 {
-  "CONTRACT_ADDRESS": "0x6e4bcd1853259c071796a2a92b0153104315c4b8",
-  "SCAN_LINK": "https://etherscan.io/address/0x6e4bcd1853259c071796a2a92b0153104315c4b8",
+  "CONTRACT_ADDRESS": "0xF1268733C6FB05EF6bE9cF23d24436Dcd6E0B35E",
+  "SCAN_LINK": "https://etherscan.io/address/0xf1268733c6fb05ef6be9cf23d24436dcd6e0b35e",
+  "TWITTER": "https://twitter.com/DApeWives",
+  "DISCORD": "https://discord.com/invite/nXCbs99BfG",
+  "OPENSEA": "https://opensea.io/collection/desperate-ape-wives",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
     "ID": 1
   },
-  "NFT_NAME": "Wold Of Norja",
-  "SYMBOL": "NORJA",
+  "WHITE_LIST_MINT": false,
+  "NFT_NAME": "Desperate ApeWives",
+  "SYMBOL": "DAW",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 75000000000000000,
-  "DISPLAY_COST": 0.075,
+  "WEI_COST": 80000000000000000,
+  "DISPLAY_COST": 0.08,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "",
-  "MARKETPLACE_LINK": "",
-  "SHOW_BACKGROUND": false
+  "MARKETPLACE_LINK": "https://opensea.io/collection/desperate-ape-wives",
+  "SHOW_BACKGROUND": false,
+  "MAX_PER_WALLET": "10 Max Per Wallet",
+  "SOLD_OUT": "Sold Out",
+  "TITLE_ONE": "WE ARE LAUNCHING",
+  "TITLE_TWO": "THE DESPERATE APEWIVES"
 }

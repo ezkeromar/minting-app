@@ -10,17 +10,17 @@
     "ID": 1
   },
   "WHITE_LIST_MINT": false,
-  "NFT_NAME": "Desperate ApeWives",
-  "SYMBOL": "DAW",
-  "MAX_SUPPLY": 10000,
+  "NFT_NAME": "FLORIDA MAN",
+  "SYMBOL": "FLMAN",
+  "MAX_SUPPLY": 5000,
   "WEI_COST": 80000000000000000,
   "DISPLAY_COST": 0.08,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "",
   "MARKETPLACE_LINK": "https://opensea.io/collection/desperate-ape-wives",
   "SHOW_BACKGROUND": false,
-  "MAX_PER_WALLET": "10 Max Per Wallet",
-  "SOLD_OUT": "Sold Out",
+  "MAX_PER_WALLET": "5 Max Per Wallet",
+  "SOLD_OUT": "",
   "TITLE_ONE": "WE ARE LAUNCHING",
-  "TITLE_TWO": "THE DESPERATE APEWIVES"
+  "TITLE_TWO": "THE FLORIDA MAN"
 }

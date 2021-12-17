@@ -83,11 +83,11 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 150px;
+  width: 300px;
   @media (min-width: 767px) {
-    width: 150px;
+    width: 300px;
   }
-  max-height: 100px;
+  max-height: 170px;
   transition: width 0.5s;
   transition: height 0.5s;
 `;
@@ -123,6 +123,13 @@ export const StyledCont = styled.div`
 export const StyledLink = styled.a`
   color: var(--secondary);
   text-decoration: none;
+`;
+
+export const BorderImg = styled.div`
+  background-image: url('/config/images/separator.png');
+  height:40px;
+  width:100%;
+  background-position-y: top;
 `;
 
 function App() {
@@ -244,14 +251,12 @@ function App() {
       <s.Container
         flex={1}
         ai={"center"}
-        style={{ padding: "24px 0", backgroundColor: "var(--primary)" }}
+        style={{ padding: "0 0 24px 0", backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-        <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: "24px 0" }}>
+        <ResponsiveWrapper flex={1} style={{ padding: "0 0 24px 0" }}>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/examples.png"} />
+            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -263,6 +268,8 @@ function App() {
               borderRadius: 24,
             }}
           >
+            <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+            <s.SpacerSmall />
             <s.TextTitle
               style={{
                 textAlign: "center",
@@ -283,6 +290,17 @@ function App() {
             >
               {CONFIG.TITLE_TWO}
             </s.TextTitle>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--primary-text)",
+                maxWidth: 300,
+                marginTop:15,
+                marginBottom:15,
+              }}
+            >
+              BREAKING NEWS: Florida Man wrecks ethereum blockchain! Florida men are infamous for the craziest, whackiest news stories that shock the world! Come hang with us for a hurricane party! We have enough drinks for everyone!
+            </s.TextDescription>
             <s.TextTitle
               style={{
                 textAlign: "center",
@@ -451,6 +469,135 @@ function App() {
               </>
             )}
             <s.SpacerMedium />
+          </s.Container>
+        </ResponsiveWrapper>
+        <BorderImg></BorderImg>
+        <ResponsiveWrapper flex={1} style={{ padding: "24px 0" }}>
+          <s.Container
+            flex={2}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              padding: 24,
+              borderRadius: 24,
+            }}
+          >
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+              Florida Man NFT:
+            </s.TextTitle>
+            <s.TextDescription
+              style={{
+                color: "var(--primary-text)",
+                marginTop:15,
+                marginBottom:15,
+                lineHeight:2,
+                maxWidth:700,
+                fontSize:21,
+              }}
+            >
+              - Only 5000 will ever be created!<br/>
+              - Florida Man play2earn game coming in 2022.<br/>
+              - Florida Man NFT holders will have early access to the game & token.<br/>
+              - Florida Man NFT holders will have access to a private party hosted by the creator in Florida 2022.<br/>
+              - Florida Man NFT holders will have access to exclusive merch and any future Florida Man activities/projects.<br/>
+              - 5 NFTs per transaction<br/>
+              - Florida Man NFT collection was created by a Florida native & does not intend to offend anyone. Just a funny tribute to Florida. Beers up!<br/>
+            </s.TextDescription>
+          </s.Container>
+          <s.SpacerLarge />
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <StyledImg alt={"example"} src={"/config/images/hidden1.png"} />
+          </s.Container>
+        </ResponsiveWrapper>
+        <BorderImg></BorderImg>
+        <ResponsiveWrapper flex={1} style={{ padding: "24px 0" }}>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <StyledImg alt={"example"} src={"/config/images/hidden2.png"} />
+          </s.Container>
+          <s.SpacerLarge />
+          <s.Container
+            flex={2}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              padding: 24,
+              borderRadius: 24,
+            }}
+          >
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+              Florida Man Play2Earn Game - Coming 2022:
+            </s.TextTitle>
+            <s.TextDescription
+              style={{
+                color: "var(--primary-text)",
+                marginTop:15,
+                marginBottom:15,
+                maxWidth: 700,
+              }}
+            >
+              Florida men will go on missions during a hurricane. Go on beer runs, save tourists, put alligators back in their swamp, have hurricane parties, & so much more!
+            </s.TextDescription>
+            <s.SpacerMedium />
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+              Story Behind the NFT:
+            </s.TextTitle>
+            <s.TextDescription
+              style={{
+                color: "var(--primary-text)",
+                marginTop:15,
+                marginBottom:15,
+                maxWidth: 700,
+              }}
+            >
+              Most of the United States has a love/hate relationship with the state of Florida. Some of the craziest news stories have come from Florida. Some say the sun has fried our brains. Others say we just don’t give a damn. Hmm, well how bout that? Jokes from a bunch of people who save up every year just to come to the Sunshine State! Have fun making your jokes but I think we all know that NOTHING CAN STOP A FLORIDA MAN. We’re here to wreck the blockchain, baby! We will wreck NFT Twitter & become the most expensive NFT collection ever! We’re Florida Men, who would ever bet against us?
+            </s.TextDescription>
+            <s.SpacerMedium />
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+              Roadmap:
+            </s.TextTitle>
+            <s.TextDescription
+              style={{
+                color: "var(--primary-text)",
+                marginTop:15,
+                marginBottom:15,
+                lineHeight:2,
+                maxWidth:700,
+                fontSize:21,
+              }}
+            >
+              - 100% sold - 5 ETH giveaway in our discord.<br/>
+              - January 2022 - Access to exclusive merch.<br/>
+              - June 2022 - Party in Florida.<br/>
+              - October 2022 - Florida Man game development.<br/>
+            </s.TextDescription>
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />

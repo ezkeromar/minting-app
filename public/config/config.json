@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0xF1268733C6FB05EF6bE9cF23d24436Dcd6E0B35E",
-  "SCAN_LINK": "https://etherscan.io/address/0xf1268733c6fb05ef6be9cf23d24436dcd6e0b35e",
+  "CONTRACT_ADDRESS": "0xF3DF37A985abF378a7072f411139fb428C08a813",
+  "SCAN_LINK": "https://etherscan.io/address/0xF3DF37A985abF378a7072f411139fb428C08a813",
   "TWITTER": "https://twitter.com/DApeWives",
   "DISCORD": "https://discord.com/invite/nXCbs99BfG",
   "OPENSEA": "https://opensea.io/collection/desperate-ape-wives",
@@ -13,14 +13,15 @@
   "NFT_NAME": "FLORIDA MAN",
   "SYMBOL": "FLMAN",
   "MAX_SUPPLY": 5000,
-  "WEI_COST": 80000000000000000,
-  "DISPLAY_COST": 0.08,
+  "WEI_COST": 90000000000000000,
+  "DISPLAY_COST": 0.09,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/desperate-ape-wives",
+  "MARKETPLACE_LINK": "",
   "SHOW_BACKGROUND": false,
   "MAX_PER_WALLET": "5 Max Per Wallet",
   "SOLD_OUT": "",
   "TITLE_ONE": "WE ARE LAUNCHING",
-  "TITLE_TWO": "THE FLORIDA MAN"
+  "TITLE_TWO": "THE FLORIDA MAN",
+  "SHOW_SOCIAL_SECTION": false
 }

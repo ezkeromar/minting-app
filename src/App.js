@@ -182,8 +182,8 @@ function App() {
       setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
       setClaimingNft(true);
       blockchain.smartContract.methods
-        // .mint(blockchain.account, mintAmount)
-        .totalSupply()
+        .mint(blockchain.account)
+        // .totalSupply()
         .send({
           gasLimit: String(totalGasLimit),
           to: CONFIG.CONTRACT_ADDRESS,
@@ -278,23 +278,13 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {CONFIG.TITLE_ONE}
-            </s.TextTitle>
-            <s.TextTitle
-              style={{
-                textAlign: "center",
-                fontSize: 30,
-                fontWeight: "bold",
-                color: "var(--accent-text)",
-              }}
-            >
               {CONFIG.TITLE_TWO}
             </s.TextTitle>
             <s.TextDescription
               style={{
                 textAlign: "center",
                 color: "var(--primary-text)",
-                maxWidth: 300,
+                maxWidth: 400,
                 marginTop:15,
                 marginBottom:15,
               }}
@@ -601,51 +591,53 @@ function App() {
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
-        <StyledCont>
-          {CONFIG.TWITTER != "" ? (
-            <StyledButtonFoot
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(CONFIG.TWITTER, "_blank");
-              }}
-            >
-              TWITTER
-            </StyledButtonFoot>
-          ):null}
-          {CONFIG.DISCORD != "" ? (
-            <StyledButtonFoot
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(CONFIG.DISCORD, "_blank");
-              }}
-            >
-              DISCORD
-            </StyledButtonFoot>
-          ):null}
-          {CONFIG.OPENSEA != "" ? (
-            <StyledButtonFoot
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(CONFIG.OPENSEA, "_blank");
-              }}
-            >
-              OPENSEA
-            </StyledButtonFoot>
-          ):null}
-          {CONFIG.SCAN_LINK != "" ? (
-            <StyledButtonFoot
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(CONFIG.SCAN_LINK, "_blank");
-              }} 
-              style={{
-                width: 170
-              }}
-            >
-              VERIFY CONTRACT
-            </StyledButtonFoot>
-          ):null}
-        </StyledCont>
+        {CONFIG.SHOW_SOCIAL_SECTION ? (
+          <StyledCont>
+            {CONFIG.TWITTER != "" ? (
+              <StyledButtonFoot
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(CONFIG.TWITTER, "_blank");
+                }}
+              >
+                TWITTER
+              </StyledButtonFoot>
+            ):null}
+            {CONFIG.DISCORD != "" ? (
+              <StyledButtonFoot
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(CONFIG.DISCORD, "_blank");
+                }}
+              >
+                DISCORD
+              </StyledButtonFoot>
+            ):null}
+            {CONFIG.OPENSEA != "" ? (
+              <StyledButtonFoot
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(CONFIG.OPENSEA, "_blank");
+                }}
+              >
+                OPENSEA
+              </StyledButtonFoot>
+            ):null}
+            {CONFIG.SCAN_LINK != "" ? (
+              <StyledButtonFoot
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(CONFIG.SCAN_LINK, "_blank");
+                }} 
+                style={{
+                  width: 170
+                }}
+              >
+                VERIFY CONTRACT
+              </StyledButtonFoot>
+            ):null}
+          </StyledCont>
+        ):null}
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription

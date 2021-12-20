@@ -1,27 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0xF3DF37A985abF378a7072f411139fb428C08a813",
-  "SCAN_LINK": "https://etherscan.io/address/0xF3DF37A985abF378a7072f411139fb428C08a813",
-  "TWITTER": "https://twitter.com/DApeWives",
-  "DISCORD": "https://discord.com/invite/nXCbs99BfG",
-  "OPENSEA": "https://opensea.io/collection/desperate-ape-wives",
+  "CONTRACT_ADDRESS": "0x50935e8DAa2DF2bd645211E0839A7774715D2615",
+  "SCAN_LINK": "https://etherscan.io/address/0x50935e8DAa2DF2bd645211E0839A7774715D2615",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
     "ID": 1
   },
-  "WHITE_LIST_MINT": false,
-  "NFT_NAME": "FLORIDA MAN",
-  "SYMBOL": "FLMAN",
-  "MAX_SUPPLY": 5000,
-  "WEI_COST": 90000000000000000,
-  "DISPLAY_COST": 0.09,
+  "NFT_NAME": "Poker People",
+  "SYMBOL": "PP",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 2000000000000000,
+  "DISPLAY_COST": 0.002,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "",
+  "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "",
-  "SHOW_BACKGROUND": false,
-  "MAX_PER_WALLET": "5 Max Per Wallet",
-  "SOLD_OUT": "",
-  "TITLE_ONE": "WE ARE LAUNCHING",
-  "TITLE_TWO": "THE FLORIDA MAN",
-  "SHOW_SOCIAL_SECTION": false
+  "SHOW_BACKGROUND": false
 }
